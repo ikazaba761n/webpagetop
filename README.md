@@ -23,3 +23,13 @@ Use the "service" command to start services instead. e.g.:
 
 service --status-all
 
+
+sudo apachectl -k stop
+
+HTTP ERROR 502
+
+apache2 start
+sudo apachectl -k start
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.****.***.*** Set the 'ServerName' directive globally to suppress this message
+
+
