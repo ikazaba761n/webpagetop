@@ -14,3 +14,12 @@ port add
 webpage improved-************************-80.app.github.dev/
 top gdata.png
 ok
+
+
+sudo systemctl status apache2
+
+"systemd" is not running in this container due to its overhead.
+Use the "service" command to start services instead. e.g.: 
+
+service --status-all
+
