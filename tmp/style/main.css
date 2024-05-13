@@ -22,3 +22,7 @@
 .px-wide {
   letter-spacing: 6px;
 }
+
+.breadcrumb li:not(:first-child)::before {
+  content: "→";
+}
