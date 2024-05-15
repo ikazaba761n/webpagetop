@@ -38,3 +38,9 @@
 .breadcrumb li:not(:first-child)::before {
   content: "--";
 }
+
+.forecast {
+  margin: 0;
+  padding: 0.3rem;
+  background-color: #eee;
+}
