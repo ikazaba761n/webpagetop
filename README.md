@@ -34,6 +34,6 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 
 This site was built using [GitHub Pages](https://pages.github.com/).
 
-This site was built using [contact](https://ikazaba761n.github.io/webpagetop/tmp/contact-us.html).
+
 
 
