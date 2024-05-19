@@ -23,7 +23,14 @@
       this page is mariadb
     </small>
 
-
+<article>
+  begin
+set @tt = tt;
+SET @sql = CONCAT('select ', '*' , ' from ' , @tt,';');
+PREPARE stmt FROM @sql;
+ EXECUTE stmt;
+end
+</article>
 
      
 
