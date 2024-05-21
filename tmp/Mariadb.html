@@ -35,34 +35,53 @@ end
 <article>
   <span style="font-family: arial;">
  create table procedurename ( id int , name varchar(40) , doc json
-);
-Query OK, 0 rows affected (0.202 sec)
+);<br>
+    
+Query OK, 0 rows affected (0.202 sec)<br>
+    
 insert into procedurename values(1 , 'dee' , '{"name": "dee", "do
-c": "in table_name"}');
-Query OK, 1 row affected (0.085 sec)
+c": "in table_name"}');<br>
+    
+Query OK, 1 row affected (0.085 sec)<br>
+    
 
- select * from procedurename;
+ select * from procedurename;<br>
+    
 +------+------+-------------------------------------------------------------------------+
 | id   | name | doc
-        |
-+------+------+-------------------------------------------------------------------------+
-|    1 | dee  | {"name": "dee", "doc":"in table_name"}
+        |<br>
+    
++------+------+-------------------------------------------------------------------------+<br>
+    
+|    1 | dee  | {"name": "dee", "doc":"in table_name"}<br>
+    
 
-select json_extract(doc,'$.name') from procedurename;
-+----------------------------+
-| json_extract(doc,'$.name') |
-+----------------------------+
-| "dee"                      |
-+----------------------------+
+select json_extract(doc,'$.name') from procedurename;<br>
+    
++----------------------------+<br>
+    
+| json_extract(doc,'$.name') |<br>
+    
++----------------------------+<br>
+    
+| "dee"                      |<br>
+    
++----------------------------+<br>
+    
 
-alter table procedurename add  COLUMN commuse varchar(40) COMMENT 'use call';
-Query OK, 0 rows affected (0.059 sec)
+alter table procedurename add  COLUMN commuse varchar(40) COMMENT 'use call';<br>
+    
+Query OK, 0 rows affected (0.059 sec)<br>
+    
 
-UPDATE procedurename set commuse = 'cal dee(\'table_name\') ' where id = 1;Query OK, 1 row affected (0.053 sec)
+UPDATE procedurename set commuse = 'cal dee(\'table_name\') ' where id = 1;Query OK, 1 row affected (0.053 sec)<br>
+    
 
-    escape \ '
+    escape \ '<br>
+    
 
-     SHOW FULL COLUMNS FROM procedurename;
+     SHOW FULL COLUMNS FROM procedurename;<br>
+    
     
 
 
