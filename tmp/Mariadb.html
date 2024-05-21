@@ -32,7 +32,42 @@ PREPARE stmt FROM @sql;
 end
 </article>
 
-     
+<article>
+  <span style="font-family: arial;">
+ create table procedurename ( id int , name varchar(40) , doc json
+);
+Query OK, 0 rows affected (0.202 sec)
+insert into procedurename values(1 , 'dee' , '{"name": "dee", "do
+c": "in table_name"}');
+Query OK, 1 row affected (0.085 sec)
+
+ select * from procedurename;
++------+------+-------------------------------------------------------------------------+
+| id   | name | doc
+        |
++------+------+-------------------------------------------------------------------------+
+|    1 | dee  | {"name": "dee", "doc":"in table_name"}
+
+select json_extract(doc,'$.name') from procedurename;
++----------------------------+
+| json_extract(doc,'$.name') |
++----------------------------+
+| "dee"                      |
++----------------------------+
+
+alter table procedurename add  COLUMN commuse varchar(40) COMMENT 'use call';
+Query OK, 0 rows affected (0.059 sec)
+
+UPDATE procedurename set commuse = 'cal dee(\'table_name\') ' where id = 1;Query OK, 1 row affected (0.053 sec)
+
+    escape \ '
+
+     SHOW FULL COLUMNS FROM procedurename;
+    
+
+
+    </span>
+</article>
 
 
 
